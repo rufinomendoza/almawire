@@ -1,4 +1,6 @@
 Almawire::Application.routes.draw do
+  get "users/new"
+
   match '/home', to: 'static_pages#home'
 
   match '/about', to: 'static_pages#about'
