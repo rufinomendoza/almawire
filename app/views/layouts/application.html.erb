@@ -13,7 +13,6 @@
       <%= link_to "Almawire", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",    root_path %></li>
           <li><%= link_to "Log in",    '#' %></li>
           <li><%= link_to "Sign up", '#' %></li>
         </ul>
@@ -26,14 +25,18 @@
   <%= yield %>
 </div>
 
-<footer class="footer">
+<footer class="navbar navbar-inverse">
+  <div class="navbar-inner">
+  <div class="container-fluid">
   <nav>
-    <ul>
+    <ul class="nav pull-left">
       <li><%= link_to "About",   about_path %></li>
       <li><%= link_to "Blog",   blog_path %></li>
       <li><%= link_to "Contact", contact_path %></li>
     </ul>
   </nav>
+  </div>
+  </div>
 </footer>
 
 </body>

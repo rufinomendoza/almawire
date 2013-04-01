@@ -4,6 +4,8 @@
 
 $grayLight: #999;
 $grayMediumLight: #eaeaea;
+$skyBlue: #82CAFF;
+$skyBlue2: #79BAEC;
 $sansFontFamily: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $baseFontFamily: $sansFontFamily;
 
@@ -20,8 +22,6 @@ html {
 
 body {
   padding-top: 60px;
-  padding-left: 10px;
-  padding-right: 10px;
   font-family: $baseFontFamily;
 }
 
@@ -40,8 +40,40 @@ textarea {
   }
 }
 
+/* Home page */
+
+.hook {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  .small {
+    font-size: 1.5em;
+  }
+}
+
 .hero-unit {
-  background-color: #ADD8E6;
+  background-color: $skyBlue;
+}
+
+.btn-signup {
+  background-color: $skyBlue;
+  background-image: -moz-linear-gradient(top, $skyBlue, $skyBlue2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($skyBlue), to($skyBlue2));
+  background-image: -webkit-linear-gradient(top, $skyBlue, $skyBlue2);
+  background-image: -o-linear-gradient(top, $skyBlue, $skyBlue2);
+  background-image: linear-gradient(to bottom, $skyBlue, $skyBlue2);
+  *background-color: $skyBlue;
+  color: black;
+    &:hover, &:focus, &:active, .btn-signup.active, .btn-signup.disabled, .btn-signup[disabled] {
+      color: $grayMediumLight;
+      background-color: $skyBlue2;
+      *background-color: $skyBlue;
+    }
+    &:active,
+    .btn-signup.active {
+      background-color: $skyBlue \7;
+    }
 }
 
 
@@ -88,6 +120,18 @@ p {
     text-decoration: none;
   }
 }
+
+.navbar-inverse .navbar-inner {
+  .nav {
+    a {
+    color: white;
+    &:hover {
+      color: $grayLight;
+    }
+    }
+  }
+}
+
 
 /* sidebar */
 
@@ -151,23 +195,17 @@ input {
 footer {
   margin-top: 55px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
   a {
-  color: #555;
+  color: white;
   &:hover {
-    color: #222;
+    color: $grayLight;
   }
-  }
-  small {
-    float: left;
   }
   ul {
     float: left;
     list-style: none;
     li {
       float: left;
-      margin-left: 10px;
     }
   } 
 }
