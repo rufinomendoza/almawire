@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
   font-family: $baseFontFamily;
 }
 
@@ -43,9 +43,8 @@ textarea {
 /* Home page */
 
 .hook {
-  font-size: 1.7em;
+  font-size: 2.0em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
   font-weight: normal;
   .small {
     font-size: 1.5em;
@@ -54,7 +53,6 @@ textarea {
 
 .hero-unit {
   background-color: $skyBlue;
-  padding-bottom: 50%;
 }
 
 .btn-signup {
@@ -77,6 +75,9 @@ textarea {
     }
 }
 
+.gap-below {
+  padding-bottom: 45%;
+}
 
 /* typography */
 
