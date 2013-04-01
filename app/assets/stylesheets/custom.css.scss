@@ -4,6 +4,7 @@
 
 $grayLight: #999;
 $grayMediumLight: #eaeaea;
+$grayDark: #404040;
 $skyBlue: #82CAFF;
 $skyBlue2: #79BAEC;
 $sansFontFamily: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -55,6 +56,10 @@ textarea {
   background-color: $skyBlue;
 }
 
+.btn-large {
+  font-weight: bold;
+}
+
 .btn-signup {
   background-color: $skyBlue;
   background-image: -moz-linear-gradient(top, $skyBlue, $skyBlue2);
@@ -65,7 +70,7 @@ textarea {
   *background-color: $skyBlue;
   color: black;
     &:hover, &:focus, &:active, .btn-signup.active, .btn-signup.disabled, .btn-signup[disabled] {
-      color: $grayMediumLight;
+      color: $grayDark;
       background-color: $skyBlue2;
       *background-color: $skyBlue;
     }
@@ -223,6 +228,7 @@ footer {
 }
 
 
+/* Splash Custom */
 
 #bg {
   position: fixed; 
@@ -242,6 +248,56 @@ footer {
   min-height: 50%;
 }
 
-#page-wrap { position: relative; z-index: 2; width: 50%; margin: 50px auto; padding: 20px; background: black; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; color: white; -webkit-border-radius: 6px;
+#splash-logo {
+  float: center;
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1.5;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#splash-hero { position: absolute; 
+  top: 25%; 
+  left: 0; 
+  right: 0; 
+  z-index: 2;
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  border-color: #252525;
+  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  border-radius: 6px;}
+  border-radius: 6px;
+  color: white;
+  .btn-signup {
+  color: black;
+  font-weight: bold;
+  a:hover {
+    text-decoration:none;
+    color: $grayDark;
+  }
+  }
+}
+
+.simple-link {
+  color: white;
+  a:hover {
+    text-decoration:underline;
+    color: white;
+  }
+}
