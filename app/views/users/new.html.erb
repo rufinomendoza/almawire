@@ -4,8 +4,8 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
 
       <%= f.label :last_name %>
       <%= f.text_field :last_name %>
@@ -19,7 +19,7 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Create my account", class: "btn btn-large btn-signup" %>
     <% end %>
   </div>
 </div>

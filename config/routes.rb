@@ -1,5 +1,8 @@
 Almawire::Application.routes.draw do
-  get "users/new"
+  
+  resources :users
+
+  match '/signup', to: 'users#new'
 
   match '/home', to: 'static_pages#home'
 
