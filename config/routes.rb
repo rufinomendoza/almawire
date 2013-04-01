@@ -12,6 +12,8 @@ Almawire::Application.routes.draw do
 
   match '/contact', to: 'static_pages#contact'
 
+  match '/splash', to: 'splashes#index'
+
   root to: 'static_pages#home'
 
   # get "static_pages/home"
