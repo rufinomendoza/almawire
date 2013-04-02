@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :uni
       t.string :college
-      t.string :string
+      t.string :year
       t.string :major
       t.string :industry
       t.string :location
