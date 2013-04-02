@@ -2,12 +2,60 @@
   <aside class="span3">
     <%= image_tag("demo.jpg") %>
   </aside>
-  <aside class="span6">
+  <aside class="span9">
     <section>
-      <h1>
-        <%= @user.first_name %>
-        <%= @user.last_name %>
-      </h1>
+      <h3>Chat with <strong><%= @user.first_name %> <%= @user.last_name %></strong>.
+        He should be able to help you or point you in the right direction. :)
+      </h3>
     </section>
+  </aside>
+</div>
+
+<br />
+
+<div class="container-fluid">
+  <aside class="span5">
+    <table class="table table-hover">
+      <tr>
+        <td>Year</td>
+        <td><%= @user.college %> <%= @user.year %></td>
+      </tr>
+      <tr>
+        <td>Major</td>
+        <td><%= @user.major %></td>
+      </tr>
+      <tr>
+        <td>Industry</td>
+        <td><%= @user.industry %></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td><%= @user.location %></td>
+      </tr>
+    </table>
+  </aside>
+  <aside class="span5">
+    <table class="table table-hover">
+      <tr>
+        <td>Phone</td>
+        <td><%= @user.phone %></td>
+      </tr>
+      <tr>
+        <td>E-Mail</td>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <td>LinkedIn</td>
+        <td align="right"><%= @user.linkedin %></td>
+      </tr>
+      <tr>
+        <td>Nervous?</td>
+        <td><%= link_to "Conversation Tips", '#' %></td>
+      </tr>
+      <tr>
+        <td>Not interested?</td>
+        <td><%= link_to "Find someone else", '#' %></td>
+      </tr>
+    </table>
   </aside>
 </div>
