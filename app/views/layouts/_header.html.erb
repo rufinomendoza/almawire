@@ -5,7 +5,7 @@
       <nav>
         <ul class="nav pull-right">
         <% if signed_in? %>
-          <li><%= link_to "Meet Alums", '#' %></li>
+          <li><%= link_to "Meet Alums", meet_path %></li>
           <li><%= link_to "Conversation Tips", '#' %></li>
           <li><%= link_to "Settings", edit_user_path(current_user) %></li>
           <li><%= link_to "Log out", signout_path, method: "delete" %></li>

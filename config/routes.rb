@@ -13,6 +13,7 @@ Almawire::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/blog', to: 'static_pages#blog'
   match '/contact', to: 'static_pages#contact'
+  match '/meet', to: 'static_pages#meet'
   
   match '/splash', to: 'splashes#index'
   match '/landing', to: 'splashes#index'

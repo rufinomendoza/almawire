@@ -11,6 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401230201) do
+ActiveRecord::Schema.define(:version => 20130401182407) do
+
+  create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "uni"
+    t.string   "college"
+    t.integer  "year"
+    t.string   "major"
+    t.string   "industry"
+    t.string   "location"
+    t.string   "phone"
+    t.string   "linkedin"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
+    t.string   "remember_token"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

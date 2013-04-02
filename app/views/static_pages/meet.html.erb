@@ -1,0 +1,36 @@
+<h1>I'd like to chat with a friendly alum who...</h1>
+
+<div class="row-fluid gap-below">
+  <aside class="span6">
+  <h2>
+    Has the same<br />
+    <%= link_to "Major", meet_path(anchor: "major"), class: "btn btn-large btn-signup"  %><br />
+    as me
+  </h2>
+  </aside>
+  <aside class="span6">
+    <h2>
+      Works in an<br />
+      <%= link_to "Industry", meet_path(anchor: "industry"), class: "btn btn-large btn-signup"  %><br />
+      I'm interested in
+    </h2>
+  </aside>
+</div>
+
+<div id="major" class="row-fluid hero-unit">
+  <aside class="span6">
+    <h3>Major</h3>
+  </aside>
+  <aside class="span6">
+    <%= image_tag("silhouette.jpg") %>
+  </aside>
+</div>
+
+<div id="industry" class="row-fluid">
+  <aside class="span6">
+    <%= image_tag("silhouette.jpg") %>
+  </aside>
+  <aside class="span6">
+    <h3>Industry</h3>
+  </aside>
+</div>
