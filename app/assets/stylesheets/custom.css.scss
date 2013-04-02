@@ -45,6 +45,12 @@ textarea {
      border-top: none; 
  }
 
+select {
+  padding: 0px;
+}
+
+.dropdown-menu { height:200px; }
+
 /* Home page */
 
 .hook {
@@ -310,4 +316,10 @@ footer {
     text-decoration:underline;
     color: white;
   }
+}
+
+
+/* This is needed to fix the dropdown menu in Bootstrap */
+select, .uneditable-input {
+  padding: 5px;
 }

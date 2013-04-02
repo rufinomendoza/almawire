@@ -18,10 +18,14 @@
 </div>
 
 <div id="major" class="row-fluid hero-unit">
-  <aside class="span6">
+  <aside class="span3">
     <h3>Major</h3>
+    <%= select_tag "major", "<option>Basket Weaving</option><option>Poultry Science</option>".html_safe %>
+    <h3>Location</h3>
+    <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
+    <h3><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h3>
   </aside>
-  <aside class="span6">
+  <aside class="span6 offset3">
     <%= image_tag("silhouette.jpg") %>
   </aside>
 </div>
@@ -30,7 +34,11 @@
   <aside class="span6">
     <%= image_tag("silhouette.jpg") %>
   </aside>
-  <aside class="span6">
+  <aside class="span3">
     <h3>Industry</h3>
+    <%= select_tag "industry", "<option>Tyrosene Synthesis</option><option>Ununpentium Mining</option>".html_safe %>
+    <h3>Location</h3>
+    <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
+    <h3><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h3>
   </aside>
 </div>
