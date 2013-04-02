@@ -1,44 +1,53 @@
-<h1>I'd like to chat with a friendly alum who...</h1>
+<div class="container-fluid">
+  <h1>I'd like to chat with a friendly alum who...</h1>
 
-<div class="row-fluid gap-below">
-  <aside class="span6">
-  <h2>
-    Has the same<br />
-    <%= link_to "Major", meet_path(anchor: "major"), class: "btn btn-large btn-signup"  %><br />
-    as me
-  </h2>
-  </aside>
-  <aside class="span6">
-    <h2>
-      Works in an<br />
-      <%= link_to "Industry", meet_path(anchor: "industry"), class: "btn btn-large btn-signup"  %><br />
-      I'm interested in
-    </h2>
-  </aside>
-</div>
+  <table class="table">
+    <tr>
+      <td><h4 class="center">Has the same</h4></td>
+      <td><h4 class="center">Works in an</h4></td>
+    </tr>
+    <tr>
+      <td>
+        <h4 class="center"><%= link_to "Major", meet_path(anchor: "major"), class: "btn btn-large btn-signup" %></h4>
+      </td>
+      <td>
+        <h4 class="center"><%= link_to "Industry", meet_path(anchor: "industry"), class: "btn btn-large btn-signup" %></h4>
+      </td>
+    </tr>
+    <tr>
+      <td><h4 class="center">as me</h4></td>
+      <td><h4 class="center">I'm interested in</h4></td>
+    </tr>
+  </table>
 
-<div id="major" class="row-fluid hero-unit">
-  <aside class="span3">
-    <h3>Major</h3>
-    <%= select_tag "major", "<option>Basket Weaving</option><option>Poultry Science</option>".html_safe %>
-    <h3>Location</h3>
-    <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
-    <h3><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h3>
-  </aside>
-  <aside class="span6 offset3">
-    <%= image_tag("silhouette.jpg") %>
-  </aside>
-</div>
+  <div id="major" class="row hero-unit">
+    <aside class="span3">
+      <h4>Major</h4>
+      <%= select_tag "major", "<option>Basket Weaving</option><option>Poultry Science</option>".html_safe %>
+      <h4>Location</h4>
+      <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
+      <h4><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h4>
+    </aside>
+    <aside class="span5"><br /></aside>
+    <aside class="span3">
+      <%= image_tag("silhouette.jpg") %>
+    </aside>
+  </div>
 
-<div id="industry" class="row-fluid">
-  <aside class="span6">
-    <%= image_tag("silhouette.jpg") %>
-  </aside>
-  <aside class="span3">
-    <h3>Industry</h3>
-    <%= select_tag "industry", "<option>Tyrosene Synthesis</option><option>Ununpentium Mining</option>".html_safe %>
-    <h3>Location</h3>
-    <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
-    <h3><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h3>
-  </aside>
+  <div id="industry" class="row">
+    <aside class="span3">
+      <%= image_tag("silhouette.jpg") %>
+    </aside>
+    
+    <aside class="span5"><br /></aside>
+
+    <aside class="span3">
+      <h4>Industry</h4>
+      <%= select_tag "industry", "<option>Tyrosene Synthesis</option><option>Ununpentium Mining</option>".html_safe %>
+      <h4>Location</h4>
+      <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
+      <h4><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h4>
+    </aside>
+  </div>
+
 </div>
