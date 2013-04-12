@@ -20,10 +20,15 @@
     </tr>
   </table>
 
+  <div class="gap-below">
+  </div>
+
+
   <div id="major" class="row hero-unit">
     <aside class="span3">
       <h4>Major</h4>
-      <%= select_tag "major", "<option>Basket Weaving</option><option>Poultry Science</option>".html_safe %>
+      <%-# To Do: Create relationship between Major and User and link through IDs %>
+      <%= collection_select(:user, :major, Major.all, :name, :name) %>
       <h4>Location</h4>
       <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
       <h4><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h4>
@@ -43,7 +48,8 @@
 
     <aside class="span3">
       <h4>Industry</h4>
-      <%= select_tag "industry", "<option>Tyrosene Synthesis</option><option>Ununpentium Mining</option>".html_safe %>
+      <%-# To Do: Create relationship between Industry and User and link through IDs %>
+      <%= collection_select(:user, :industry, Industry.all, :name, :name) %>
       <h4>Location</h4>
       <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
       <h4><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h4>

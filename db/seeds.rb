@@ -5,3 +5,30 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "Generating seed data"
+
+require 'open-uri'
+
+# Use this as a template for delimited data sets
+Industry.delete_all
+open("#{Rails.root}/db/seed/industries.txt") do |industries|
+  industries.read.each_line do |industry|
+    naics_code, name = industry.chomp.split("|")
+    Industry.create!(:name => name, :naics_code => naics_code)
+  end
+end
+
+puts "Generated Industries"
+
+# Use this as a template for single vector data sets
+Major.delete_all
+open("#{Rails.root}/db/seed/majors.txt") do |majors|
+  majors.read.each_line do |major|
+    Major.create!(:name => major)
+  end
+end
+
+
+puts "Generated Majors"
+
+puts "Finished"
