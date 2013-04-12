@@ -4,8 +4,8 @@
 <div class="row-fluid">
   <aside class="span6">
     <section>
-      <%= f.label :uni, 'University' %>
-      <%= f.text_field :uni %>
+      <%= f.label :university %>
+      <%= f.collection_select(:university, University.all, :name, :name) %>
 
       <%= f.label :college %>
       <%= f.text_field :college %>

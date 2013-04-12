@@ -17,6 +17,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all#.where("university = ?", current_user.university).where("id != ?", current_user.id)
+  end
+
+  def roulette
+    @meet_user = User.where("university = ?", current_user.university).where("id != ?", current_user.id).shuffle.first#Add form submission params
+    if @meet_user
+      redirect_to user_path(@meet_user)
+    else
+      redirect_to meet_path
+    end
+  end
+
   def show
     @user = User.find(params[:id])
   end
@@ -27,6 +40,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    @user.university.chomp!
+    @user.major.chomp!
+    @user.industry.chomp!
     if @user.update_attributes(params[:user])
       flash[:success] = "Profile updated"
       sign_in @user
@@ -40,7 +56,10 @@ class UsersController < ApplicationController
   private
 
     def signed_in_user
-      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in."
+      end
     end
 
     def correct_user

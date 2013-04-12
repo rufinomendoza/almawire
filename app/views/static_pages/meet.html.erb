@@ -31,7 +31,7 @@
       <%= collection_select(:user, :major, Major.all, :name, :name) %>
       <h4>Location</h4>
       <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
-      <h4><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h4>
+      <h4><%= link_to "Match Me", roulette_path, class: "btn btn-large btn-success"%></h4>
     </aside>
     <aside class="span5"><br /></aside>
     <aside class="span3">
@@ -52,7 +52,7 @@
       <%= collection_select(:user, :industry, Industry.all, :name, :name) %>
       <h4>Location</h4>
       <%= select_tag "major", "<option selected='selected'>(optional)</option><option>Aberdeen</option><option>Zimbabwe</option>".html_safe %>
-      <h4><%= link_to "Match Me", '#', class: "btn btn-large btn-success"%></h4>
+      <h4><%= link_to "Match Me", roulette_path, class: "btn btn-large btn-success"%></h4>
     </aside>
   </div>
 

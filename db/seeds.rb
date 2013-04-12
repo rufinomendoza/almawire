@@ -18,17 +18,21 @@ open("#{Rails.root}/db/seed/industries.txt") do |industries|
   end
 end
 
-puts "Generated Industries"
-
 # Use this as a template for single vector data sets
 Major.delete_all
 open("#{Rails.root}/db/seed/majors.txt") do |majors|
   majors.read.each_line do |major|
+    major = major.chomp
     Major.create!(:name => major)
   end
 end
 
+University.delete_all
+open("#{Rails.root}/db/seed/universities.txt") do |universities|
+  universities.read.each_line do |university|
+    university = university.chomp
+    University.create!(:name => university)
+  end
+end
 
-puts "Generated Majors"
-
-puts "Finished"
+puts "Data seeded"

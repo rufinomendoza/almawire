@@ -18,6 +18,8 @@ Almawire::Application.routes.draw do
   match '/splash', to: 'splashes#index'
   match '/landing', to: 'splashes#index'
 
+  match '/roulette', to: 'users#roulette'
+
   root to: 'splashes#index'
 
   # get "static_pages/home"
