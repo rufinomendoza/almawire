@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the Almawire!"
-      redirect_to edit_user_path(@user)
+      redirect_to meet_path
     else
       render 'new'
     end

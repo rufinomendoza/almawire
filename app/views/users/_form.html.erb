@@ -11,13 +11,13 @@
         <%= f.text_field :college %>
 
         <%= f.label :major %>
-        <%= f.text_field :major %>
+        <%= f.collection_select(:major, Major.all, :name, :name) %>
 
         <%= f.label :year, 'Graduation Year' %>
         <%= f.text_field :year %>
 
         <%= f.label :industry %>
-        <%= f.text_field :industry %>
+        <%= f.collection_select(:industry, Industry.all, :name, :name) %>
 
         <%= f.label :location %>
         <%= f.text_field :location %>
@@ -50,9 +50,11 @@
 
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "Save", class: "btn btn-large" %>
-      <% end %>
     </section>
   </aside>
 </div>
+
+<p class="center">
+  <%= f.submit "Save", class: "center btn btn-signup btn-large" %>
+</p>
+<% end %>

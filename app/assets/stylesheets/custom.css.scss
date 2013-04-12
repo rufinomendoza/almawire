@@ -281,13 +281,11 @@ footer {
   }
 }
 
-#foreground { position: absolute; 
-  top: 20%; 
+#foreground { position: relative; 
   left: 0; 
   right: 0;
   z-index: 2;
-  min-width:50%;
-  max-width:60%;
+  max-width:80%;
   margin: auto;
   padding: 2%;
   background-color: #1b1b1b;
