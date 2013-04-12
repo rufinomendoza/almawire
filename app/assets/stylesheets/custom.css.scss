@@ -281,14 +281,15 @@ footer {
   }
 }
 
-#splash-hero { position: absolute; 
+#foreground { position: absolute; 
   top: 20%; 
   left: 0; 
   right: 0;
   z-index: 2;
-  width: 75%;
+  min-width:50%;
+  max-width:60%;
   margin: auto;
-  padding: 20px;
+  padding: 2%;
   background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));

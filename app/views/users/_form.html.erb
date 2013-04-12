@@ -1,24 +1,58 @@
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+<p>Eventually tackle image upload</p>
+<div class="row-fluid">
+  <aside class="span6">
+    <section>
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
+        <%= f.label :uni, 'University' %>
+        <%= f.text_field :uni %>
 
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name %>
+        <%= f.label :college %>
+        <%= f.text_field :college %>
 
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name %>
+        <%= f.label :major %>
+        <%= f.text_field :major %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+        <%= f.label :year, 'Graduation Year' %>
+        <%= f.text_field :year %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+        <%= f.label :industry %>
+        <%= f.text_field :industry %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+    </section>
+  </aside>
+  <aside class="span6">
+    <section>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-signup" %>
-    <% end %>
-  </div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.label :phone %>
+        <%= f.text_field :phone %>
+
+        <%= f.label :linkedin %>
+        <%= f.text_field :linkedin %>
+    </section>
+  </aside>
+</div>
+<div class="row-fluid">
+  <aside class="span6 offset3">
+    <section> 
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+
+        <%= f.submit "Save", class: "btn btn-large" %>
+      <% end %>
+    </section>
+  </aside>
 </div>
