@@ -1,9 +1,11 @@
+<h1>Other people who went to <%= current_user.university %></h1>
+
 <% @users.each do |user| %>
-  <p>Name: <%= user.name %></p>
-  <p>University: <%= user.university %></p>
+  <h3><%= user.name %></h3>
+  <p><%= user.location %></p>
   <p>Major: <%= user.major %></p>
   <p>Industry: <%= user.industry %></p>
-  <p>Location: <%= user.location %></p>
-  <p>E-Mail: <%= user.email %></p>
+  <p>University: <%= user.university %> (test for debugging)</p>
+  <%= link_to "Contact", "#", class: "btn btn-signup btn-small" %>
   <hr />
 <% end %>

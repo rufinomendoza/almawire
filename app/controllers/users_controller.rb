@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :signed_in_user, only: [:edit, :update, :index, :show]
   before_filter :correct_user,   only: [:edit, :update]
 
   def new
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all#.where("university = ?", current_user.university).where("id != ?", current_user.id)
+    @users = User.where("university = ?", current_user.university).where("id != ?", current_user.id)
   end
 
   def roulette
@@ -31,7 +31,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # This restricts access to people from the same University 
+    if @user = User.where("university = ?", current_user.university).find(params[:id])
+      @user
+    else
+      redirect_to(root_path) # This redirect does not work. It brings up an error
+    end
   end
 
   def edit

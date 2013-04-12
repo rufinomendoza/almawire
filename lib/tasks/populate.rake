@@ -9,6 +9,8 @@ namespace :db do
       user.first_name = Faker::Name.name.split(" ").first
       user.last_name = Faker::Name.name.split(" ").last
       user.email   = Faker::Internet.email
+      user.password_digest = "foobar"
+      user.remember_token = "foobar"
       user.university = University.all.shuffle.first.name
       user.industry = Industry.all.shuffle.first.name
       user.major = Major.all.shuffle.first.name
