@@ -304,18 +304,14 @@ footer {
   .btn-signup {
   color: black;
   font-weight: bold;
-  a:hover {
-    text-decoration:none;
-    color: $grayDark;
-  }
   }
 }
 
 .simple-link {
-  color: white;
-  a:hover {
-    text-decoration:underline;
-    color: white;
+  color: silver;
+  &:hover {
+    text-decoration:none;
+    color: $skyBlue;
   }
 }
 

@@ -1,17 +1,18 @@
-<h1>Sign in</h1>
-<div class="row-fluid">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+<%= render 'splashes/background' %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+<div class="container-fluid">
+  <div id="foreground">
+    <h1>Sign in</h1>
+        <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
 
-      <%= f.submit "Sign in", class: "btn btn-signup" %>
-    <% end %>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+          <%= f.submit "Sign in", class: "btn btn-signup" %>
+        <% end %>
+    <p>New user? <%= link_to "Sign up now!", signup_path, class: "simple-link" %></p>
   </div>
 </div>
